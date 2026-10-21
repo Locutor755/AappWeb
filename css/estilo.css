@@ -1,0 +1,63 @@
+body{
+    font-family: 'Grenze Gotisch', 'Old English Text MT',serif;
+    background-color: rgb(136, 133, 133);
+    background-image: url(../imagenes/Background\ RIP.jfif);
+    background-size: 1500px 750px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: black;
+    line-height: 1.6;
+    margin: 0;
+    padding: 40px 20px;
+}
+.tarjeta{
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: rgba(75,0, 130, 0.4);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255 255, 0.02);
+    box-shadow: 0 4px 12px rgba(0, 0 0, 0.08);
+}
+.encabezado{
+    text-align: center;
+    border-bottom: 2px solid #050505;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+.encabezado h1{
+    font-size: 28px;
+    color: #000000;
+    margin-bottom: 5px;
+}
+.seccion-bio{
+    text-align: center;
+    margin-bottom: 25px;
+}
+.seccion-bio p{
+    font-size: 15px;
+    color: #000000;
+    margin-bottom: 15px;
+}
+.logo{
+    width: 150px;
+    height: 150px;
+    border-radius: 30%;
+    border: 3px solid;
+    object-fit: cover;
+}
+.formulario{
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+
+
+.button{
+    cursor: pointer;
+    font-family: 'Grenze Gotisch', 'Old English Text MT',serif;
+    border-color: none;
+}

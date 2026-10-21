@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reast In Peace</title>
+    <link rel="icon" href="../imagenes/Logo_RIP.jfif">
+    <link rel="stylesheet" href="../css/estilo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@700&display=swap" rel="stylesheet">>
+</head>
+<body>
+    
+    <main class="tarjeta">
+        <header class="encabezado">
+            <h1>Reast In Peace</h1>            
+        </header>
+        <section class="seccion-bio">
+            <p>Bienvenido, somos RIP la tienda que viste a los muestos y los hace ver vivos</p>
+            <img src="../imagenes/Logo_RIP.jfif" alt="logo de la tienda" width="250" class="logo">
+        </section>
+        <form action="#" method="get" class="formulario">
+            <label for="nombre">Nombre</label>
+            <input class="nombre" type="text" name="nombre" id="nombre" placeholder="Agrega Tu nombre"
+            required oninput="this.value=this.value.toUppercase()" autofocus>
+            <br>
+            <br>
+            
+            <label for="correo">Correo Electronico</label>
+            <input type="email" id="correo" required placeholder="Agrega tu correo electronico">
+            <br>
+            <br>
+            <label for="contraseña">Contraseña</label>
+            <input type="password" name="contraseña" id="contraseña" required>
+            <br>
+            <br>
+            <label for="acepto">Acepto terminos y condiciones</label>
+            <input type="checkbox" id="acepto" required>
+            <br>
+            <button class="button"  type="submit">Guardar</button>
+        </form>
+    </main>
+</body>
+</html>
