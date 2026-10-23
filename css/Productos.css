@@ -1,0 +1,98 @@
+/* Estilos generales */
+
+.body{
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url(../imagenes/Background\ RIP.jfif);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+/* Estructura de la barra de navegación */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000000;
+  padding: 15px 40px;
+  color: #ffffff;
+  width: 100%;
+}
+
+/* 1. Estilos del Logo */
+.logo-box {
+  display: inline-block;
+  border: 3px solid #ffffff;
+  padding: 5px 12px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+
+
+/* 2. Estilos del Menú central */
+.navbar-menu {
+  display: flex;
+  gap: 40px;
+}
+
+.nav-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: 6px; /* Espaciado entre letras como en la imagen */
+  transition: opacity 0.3s ease;
+}
+
+/* Enlace ligeramente opaco ("HOME" en la imagen) */
+.nav-link.dim {
+  color: #888888;
+}
+
+.nav-link:hover {
+  color: #ffffff;
+  opacity: 0.8;
+}
+
+/* 3. Estilos de las Acciones de la derecha */
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.user-account {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: normal;
+  font-family: Arial, sans-serif;
+}
+
+.user-account i {
+  font-size: 20px;
+}
+
+.cart-icon {
+  color: #ffffff;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.user-account:hover,
+.cart-icon:hover {
+  opacity: 0.8;
+}
+.imagen-blur {
+  /* El valor en píxeles (px) determina la intensidad del difuminado */
+  filter: blur(8px); 
+}
