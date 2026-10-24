@@ -1,38 +1,51 @@
 body{
     font-family: 'Grenze Gotisch', 'Old English Text MT',serif;
-    background-color: rgb(136, 133, 133);
-    background-image: url(../imagenes/Background\ RIP.jfif);
-    background-size: 1500px 750px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
     color: black;
     line-height: 1.6;
     margin: 0;
     padding: 40px 20px;
 }
+body::before{
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../imagenes/Background\ RIP.jfif);
+    background-size: 1500px 750px;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(8px);
+    z-index: -1;
+}
 .tarjeta{
     max-width: 600px;
     margin: 0 auto;
-    background-color: rgba(75,0, 130, 0.4);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    background-color: #5e020e;
+    color: #ffffff;
     padding: 30px;
     border-radius: 12px;
+
     border: 1px solid rgba(255, 255, 255, 0.02);
     box-shadow: 0 4px 12px rgba(0, 0,  0, 0.08);
     padding: 20px;
 
+=======
+    border: 1px solid rgba(255, 255 255, 0.01);
+    box-shadow: 0 4px 12px rgba(0, 0 0, 0.3);
+    
+
 }
 .encabezado{
     text-align: center;
-    border-bottom: 2px solid #050505;
+    border-bottom: 2px solid #ffffff;
     padding-bottom: 15px;
     margin-bottom: 20px;
 }
 .encabezado h1{
     font-size: 28px;
-    color: #000000;
+    color: #ffffff;
     margin-bottom: 5px;
 }
 .seccion-bio{
@@ -41,7 +54,7 @@ body{
 }
 .seccion-bio p{
     font-size: 15px;
-    color: #000000;
+    color: #ffffff;
     margin-bottom: 15px;
 }
 .logo{
@@ -62,6 +75,7 @@ body{
     cursor: pointer;
     font-family: Arial, Helvetica, sans-serif;
     border-color: none;
+
     
 }
   .portada {
@@ -75,4 +89,61 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Grenze Gotisch', 'Old English Text MT',serif;
     color: #000000;
     margin-bottom: 10px;
+=======
+}
+.check{
+    cursor: pointer;
+}
+.input_radio_oculto{
+    display: none !important;
+}
+.contenedor_pestanas{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+.btn_tab{
+    background: rgba(0, 0 0, 0.04);
+    color: #ffffff;
+    border: 1px solid #000;
+    padding: 8px 18px;
+    font-family: 'Grenze Gotisch', serif;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+.formulario{
+    display: none;
+    text-align: center;
+    margin-bottom: 25px;
+}
+#registro:checked~#formulario_registro{
+    display: block;
+}
+/* Aqui esta el error*/
+#login:checked ~ #formulario_login {
+    display: block;
+}
+#registro:checked~.contenedor_pestanas #label_registro,
+#login:checked~.contenedor_pestanas #label_login{
+    background-color: #000000;
+    color: #ffffff;
+    border-color: #ffffff;
+    font-weight: bold;
+}
+.formulario input[type="text"],
+.formulario input[type="email"],
+.formulario input[type="password"]{
+    padding: 6px 10px;
+    border-radius: 4px;
+    border: 1px solid#000;
+    font-family: inherit;
+}
+.opcion_chek{
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+
 }

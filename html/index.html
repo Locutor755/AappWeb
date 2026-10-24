@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reast In Peace</title>
+    <title>Rest In Peace</title>
     <link rel="icon" href="../imagenes/Logo_RIP.jfif">
     <link rel="stylesheet" href="../css/estilo.css">
     <link rel="stylesheet" href="P_principal.html">
@@ -12,13 +12,33 @@
 <body>
     
     <main class="tarjeta">
+
+        <input type="radio" name="pestanas_auto" id="registro" checked class="input_radio_oculto">
+        <input type="radio" name="pestanas_auto" id="login" class="input_radio_oculto">
+
         <header class="encabezado">
-            <h1>Reast In Peace</h1>            
+            <h1>Rest In Peace</h1>            
         </header>
+
         <section class="seccion-bio">
+
             <p>Bienvenido a RIP </p>
            
         <form action="#" method="get" class="formulario">
+=======
+            <p>Bienvenido, somos RIP la tienda que viste a los muestos y los hace ver vivos</p>
+            <img src="../imagenes/Logo_RIP.jfif" alt="logo de la tienda" width="250" class="logo">
+        </section>
+
+
+        <div class="contenedor_pestanas">
+            <label for="registro" class="btn_tab" id="label_registro">Registrarse</label>
+            <label for="login" class="btn_tab" id="label_login">Iniciar sesion</label>
+        </div>
+
+        
+        <form action="#" method="post" class="formulario" id="formulario_registro">
+
             <label for="nombre">Nombre</label>
             <input class="nombre" type="text" name="nombre" id="nombre" placeholder="Agrega Tu nombre"
             required oninput="this.value=this.value.toUppercase()" autofocus>
@@ -34,9 +54,19 @@
             <br>
             <br>
             <label for="acepto">Acepto terminos y condiciones</label>
-            <input type="checkbox" id="acepto" required>
+            <input type="checkbox" id="acepto" required class="check">
             <br>
             <button class="button"  type="submit">Guardar</button>
+        </form>
+
+        <form action="#" method="post" id="formulario_login" class="formulario">
+            <label for="login_correo" >Ingresa el correo electronico</label>
+            <input type="email" name="login_correo" id="login_correo" required placeholder="Correo registrado">
+            <br><br>
+            <label for="login_contraseña">Ingresa tu contraseña</label>
+            <input type="password" name="login_contraseña" id="login_contraseña" required placeholder="Conttraseña">
+            <br><br>
+            <button class="button" type="submit">Ingresar</button>
         </form>
     </main>
 </body>
