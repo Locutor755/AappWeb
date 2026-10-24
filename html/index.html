@@ -1,73 +1,225 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rest In Peace</title>
-    <link rel="icon" href="../imagenes/Logo_RIP.jfif">
-    <link rel="stylesheet" href="../css/estilo.css">
-    <link rel="stylesheet" href="P_principal.html">
-    <link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@700&display=swap" rel="stylesheet">>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>REST in PEACE — Tienda Oficial</title>
+  <link rel="stylesheet" href="/css/principal.css">
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    
-    <main class="tarjeta">
 
-        <input type="radio" name="pestanas_auto" id="registro" checked class="input_radio_oculto">
-        <input type="radio" name="pestanas_auto" id="login" class="input_radio_oculto">
+  <!-- BARRA DE NAVEGACIÓN -->
+  <header class="navbar">
+    <div class="logo">
+      <span>REST in PEACE</span>
+    </div>
+    <nav class="nav-links">
+      <a href="#productos" class="active">Productos</a>
+      <a href="#contacto">Contacto</a>
+      <a href="#nosotros">Sobre Nosotros</a>
+    </nav>
+    <div class="nav-right">
+     
+      <button class="login-btn" id="openLogin">
+        <i class="fa-regular fa-user"></i> Iniciar sesión
+      </button>
+    </div>
+  </header>
 
-        <header class="encabezado">
-            <h1>Rest In Peace</h1>            
-        </header>
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Bienvenido a nuestra tienda</h1>
+      <p>Explora nuestros productos y encuentra lo que necesitas.</p>
+      <div class="hero-actions">
+        <a href="#productos" class="btn btn-primary">Ver Colección</a>
+        <a href="#nosotros" class="btn btn-outline">Saber Más</a>
+      </div>
+    </div>
+  </section>
 
-        <section class="seccion-bio">
+  <!-- SECCIÓN DE PRODUCTOS -->
+  <section id="productos" class="section">
+    <div class="section-title">
+      <h2>Nuestros Productos</h2>
+      <p>Colección exclusiva con acabados premium y diseño gótico urbano.</p>
+    </div>
 
-            <p>Bienvenido a RIP </p>
-           
-        <form action="#" method="get" class="formulario">
-=======
-            <p>Bienvenido, somos RIP la tienda que viste a los muestos y los hace ver vivos</p>
-            <img src="../imagenes/Logo_RIP.jfif" alt="logo de la tienda" width="250" class="logo">
-        </section>
+    <!-- Filtros de Categorías -->
+    <div class="category-filters">
+      <button class="filter-btn active" data-category="all">Todos</button>
+      <button class="filter-btn" data-category="ropa">Ropa</button>
+      <button class="filter-btn" data-category="gorras">Gorrasf</button>
+      </div>
 
-
-        <div class="contenedor_pestanas">
-            <label for="registro" class="btn_tab" id="label_registro">Registrarse</label>
-            <label for="login" class="btn_tab" id="label_login">Iniciar sesion</label>
+    <!-- Grid de Productos -->
+    <div class="products-grid">
+      
+      <!-- Producto 1 -->
+      <div class="product-card" data-category="ropa">
+        <div class="product-badge">Nuevo</div>
+        <div class="product-img">
+          <img src="../imagenes/Playera 1.jfif" alt="Gothic Oversize">
         </div>
+        <div class="product-info">
+          <div class="product-category">Ropa</div>
+          <h3 class="product-name">Playera Gothic Oversize</h3>
+          <div class="product-bottom">
+            <span class="product-price">$850.00 MXN</span>
+            <button class="add-to-cart-btn" data-id="1" data-name="Gothic Oversize" data-price="850">
+              <i class="fa-solid fa-plus"></i>
+            </button>
+          </div>
+        </div>
+      </div>
 
-        
-        <form action="#" method="post" class="formulario" id="formulario_registro">
+      <!-- Producto 2 -->
+      <div class="product-card" data-category="ropa">
+        <div class="product-img">
+          <img src="../imagenes/Playera 2.jfif" alt="Sudadera Dark Essential">
+        </div>
+          
+        <div class="product-info">
+          <div class="product-category">Ropa</div>
+          <h3 class="product-name">Sudadera Dark Essential</h3>
+          <div class="product-bottom">
+            <span class="product-price">$450.00 MXN</span>
+            <button class="add-to-cart-btn" data-id="2" data-name="Sudadera Dark Essential" data-price="450">
+              <i class="fa-solid fa-plus"></i>
+            </button>
+          </div>
+        </div>
+      </div>
 
-            <label for="nombre">Nombre</label>
-            <input class="nombre" type="text" name="nombre" id="nombre" placeholder="Agrega Tu nombre"
-            required oninput="this.value=this.value.toUppercase()" autofocus>
-            <br>
-            <br>
-            
-            <label for="correo">Correo Electronico</label>
-            <input type="email" id="correo" required placeholder="Agrega tu correo electronico">
-            <br>
-            <br>
-            <label for="contraseña">Contraseña</label>
-            <input type="password" name="contraseña" id="contraseña" required>
-            <br>
-            <br>
-            <label for="acepto">Acepto terminos y condiciones</label>
-            <input type="checkbox" id="acepto" required class="check">
-            <br>
-            <button class="button"  type="submit">Guardar</button>
-        </form>
+      <!-- Producto 3 -->
+      <div class="product-card" data-category="accesorios">
+        <div class="product-badge">Top Ventas</div>
+        <div class="product-img">
+          <img src="../imagenes/Playera 3.jfif" alt="Playera Skull Ring">
+        </div>
+        <div class="product-info">
+          <div class="product-category">Playera</div>
+          <h3 class="product-name">Playera gris</h3>
+          <div class="product-bottom">
+            <span class="product-price">$320.00 MXN</span>
+            <button class="add-to-cart-btn" data-id="3" data-name="Playera Skull Ring" data-price="320">
+              <i class="fa-solid fa-plus"></i>
+            </button>
+          </div>
+        </div>
+      </div>
 
-        <form action="#" method="post" id="formulario_login" class="formulario">
-            <label for="login_correo" >Ingresa el correo electronico</label>
-            <input type="email" name="login_correo" id="login_correo" required placeholder="Correo registrado">
-            <br><br>
-            <label for="login_contraseña">Ingresa tu contraseña</label>
-            <input type="password" name="login_contraseña" id="login_contraseña" required placeholder="Conttraseña">
-            <br><br>
-            <button class="button" type="submit">Ingresar</button>
-        </form>
-    </main>
+     
+
+      <!-- Producto 4 -->
+      <div class="product-card" data-category="accesorios">
+        <div class="product-img">
+          <img src="">
+        </div>
+        <div class="product-info">
+          <div class="product-category">Accesorios</div>
+          <h3 class="product-name">Reloj Minimal Black</h3>
+          <div class="product-bottom">
+            <span class="product-price">$1,100.00 MXN</span>
+            <button class="add-to-cart-btn" data-id="5" data-name="Reloj Minimal Black" data-price="1100">
+              <i class="fa-solid fa-plus"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 6 -->
+      <div class="product-card" data-category="ropa">
+        <div class="product-badge">Oferta</div>
+        <div class="product-img">
+          <img src="../imagenes/Playera 4.jfif" alt="Playera Skull RingGit checkout -b nombre_rama
+">
+
+    </div>
+  </section>
+
+  <!-- SECCIÓN SOBRE NOSOTROS -->
+  <section id="nosotros" class="section bg-card">
+    <div class="about-container">
+      <div class="about-text">
+        <div class="section-title" style="text-align: left;">
+          <h2>Sobre Nosotros</h2>
+        </div>
+        <p>En <strong>REST in PEACE</strong> fusionamos el diseño underground, la moda urbana y la estética atemporal para crear prendas y accesorios con identidad propia.</p>
+        <p>Cada pieza está confeccionada con materiales de la más alta calidad, cuidando cada detalle desde el patrón inicial hasta el empaque final.</p>
+        <div class="stats-grid">
+          <div class="stat-item">
+            <h3>+5K</h3>
+            <p>Clientes Satisfechos</p>
+          </div>
+          <div class="stat-item">
+            <h3>100%</h3>
+            <p>Calidad Garantizada</p>
+          </div>
+          <div class="stat-item">
+            <h3>Envío</h3>
+            <p>A todo el país</p>
+          </div>
+        </div>
+      </div>
+      <div class="about-img">
+        <img src="">
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN CONTACTO -->
+  <section id="contacto" class="section">
+    <div class="section-title">
+      <h2>Contacto</h2>
+      <p>¿Tienes dudas o comentarios? Escríbenos y te responderemos lo antes posible.</p>
+    </div>
+    <div class="contact-container">
+      <form class="contact-form" onsubmit="event.preventDefault(); alert('Mensaje enviado correctamente');">
+        <div class="form-group">
+          <label for="name">Nombre Completo</label>
+          <input type="text" id="name" placeholder="Tu nombre" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Correo Electrónico</label>
+          <input type="email" id="email" placeholder="correo@ejemplo.com" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Mensaje</label>
+          <textarea id="message" rows="5" placeholder="¿En qué podemos ayudarte?" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar Mensaje</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="logo">
+          <span>REST in PEACE</span>
+        </div>
+        <p style="margin-top: 15px; color: #888; font-size: 0.9rem;">
+          Estilo, actitud e identidad sin filtros.
+        </p>
+      </div>
+      <div class="footer-links">
+        <h4>Enlaces Rápidos</h4>
+        <ul>
+          <li><a href="#productos">Productos</a></li>
+          <li><a href="#nosotros">Sobre Nosotros</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+      
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 REST in PEACE. Todos los derechos reservados.
+    </div>
+  </footer>
+
 </body>
 </html>
